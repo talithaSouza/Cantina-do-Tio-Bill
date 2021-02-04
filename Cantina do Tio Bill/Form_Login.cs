@@ -22,6 +22,13 @@ namespace Cantina_do_Tio_Bill
 
         }
 
-      
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+            if(tb_usuario.Text == "bill" && tb_senha.Text == "bill")
+            {
+                Form_Menu form_Menu = new Form_Menu();
+                form_Menu.ShowDialog();
+            }
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace Cantina_do_Tio_Bill
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,8 +39,9 @@ namespace Cantina_do_Tio_Bill
             this.label3 = new System.Windows.Forms.Label();
             this.tb_usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,7 +52,7 @@ namespace Cantina_do_Tio_Bill
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(10, 179);
+            this.panel1.Location = new System.Drawing.Point(11, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 64);
             this.panel1.TabIndex = 4;
@@ -107,6 +109,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_entrar.TabIndex = 2;
             this.btn_entrar.Text = "Entrar";
             this.btn_entrar.UseVisualStyleBackColor = true;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             // 
             // tb_senha
             // 
@@ -114,6 +117,8 @@ namespace Cantina_do_Tio_Bill
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.Size = new System.Drawing.Size(288, 22);
             this.tb_senha.TabIndex = 1;
+            this.tb_senha.Text = "bill";
+            this.tb_senha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_senha.UseSystemPasswordChar = true;
             // 
             // label3
@@ -133,6 +138,8 @@ namespace Cantina_do_Tio_Bill
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.Size = new System.Drawing.Size(289, 22);
             this.tb_usuario.TabIndex = 0;
+            this.tb_usuario.Text = "bill";
+            this.tb_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -145,24 +152,31 @@ namespace Cantina_do_Tio_Bill
             this.label2.TabIndex = 0;
             this.label2.Text = "Usuário:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(164, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 42);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Login";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cantina_do_Tio_Bill.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(132, 71);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // imageList1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(198, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "label5";
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form_Login
             // 
@@ -175,7 +189,7 @@ namespace Cantina_do_Tio_Bill
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form_Login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -199,6 +213,7 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
