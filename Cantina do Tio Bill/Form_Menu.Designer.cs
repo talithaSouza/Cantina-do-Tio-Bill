@@ -57,6 +57,7 @@ namespace Cantina_do_Tio_Bill
             this.gerenciarClienteToolStripMenuItem.Name = "gerenciarClienteToolStripMenuItem";
             this.gerenciarClienteToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
             this.gerenciarClienteToolStripMenuItem.Text = "Gerenciar Cliente";
+            this.gerenciarClienteToolStripMenuItem.Click += new System.EventHandler(this.gerenciarClienteToolStripMenuItem_Click);
             // 
             // gerenciarQuentinhasToolStripMenuItem
             // 
