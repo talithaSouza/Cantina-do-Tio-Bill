@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cantina_do_Tio_Bill.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Cantina_do_Tio_Bill
 {
     public partial class Form_GerenciarCliente : Form
     {
+        Cliente cliente = new Cliente();
         public Form_GerenciarCliente()
         {
             InitializeComponent();
@@ -19,13 +21,28 @@ namespace Cantina_do_Tio_Bill
 
         private void btn_LimparCamposCliente_Click(object sender, EventArgs e)
         {
-            tb_ClienteNome.Text = "";
+                 tb_ClienteNome.Text = "";
             tb_ClienteSobrenome.Text = "";
-            tb_ClienteTelefone.Text = "";
-            tb_Bairro.Text = "";
-            tb_Rua.Text = "";
-            tb_NumEndereco.Text = "";
-            tb_RefeEndeco.Text = "";
+             tb_ClienteTelefone.Text = "";
+                      tb_Bairro.Text = "";
+                         tb_Rua.Text = "";
+                 tb_NumEndereco.Text = "";
+                  tb_RefeEndeco.Text = "";
+        }
+
+        private void btn_AdcCliente_Click(object sender, EventArgs e)
+        {
+                 cliente.Nome = tb_ClienteNome.Text;
+            cliente.Sobrenome = tb_ClienteSobrenome.Text;
+             cliente.Telefone = tb_ClienteTelefone.Text;
+
+            Boolean TesteInserirCliente = cliente.InserirCliente(cliente);
+
+            if (TesteInserirCliente)
+            {
+                MessageBox.Show("Cliente Adicionado com sucesso");
+            }
+
         }
     }
 }

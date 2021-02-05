@@ -117,6 +117,7 @@ namespace Cantina_do_Tio_Bill
             // 
             // btn_AdcCliente
             // 
+            this.btn_AdcCliente.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btn_AdcCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AdcCliente.Location = new System.Drawing.Point(12, 329);
             this.btn_AdcCliente.Name = "btn_AdcCliente";
@@ -124,6 +125,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_AdcCliente.TabIndex = 17;
             this.btn_AdcCliente.Text = "Adicionar Cliente";
             this.btn_AdcCliente.UseVisualStyleBackColor = true;
+            this.btn_AdcCliente.Click += new System.EventHandler(this.btn_AdcCliente_Click);
             // 
             // dataGridView1
             // 
