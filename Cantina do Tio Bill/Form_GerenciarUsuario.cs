@@ -44,7 +44,7 @@ namespace Cantina_do_Tio_Bill
             }
             else
             {
-                Boolean testeInserir = u.InserirUsuario(Nome, Sobrenome, User, Senha);
+                Boolean testeInserir = u.inserirUsuario(Nome, Sobrenome, User, Senha);
                 if (testeInserir)
                 {
                     dtgv_usuarios.DataSource = u.getUsuarios();
@@ -61,5 +61,54 @@ namespace Cantina_do_Tio_Bill
         {
             dtgv_usuarios.DataSource = u.getUsuarios();
         }
+
+        private void btn_EditarUsuario_Click(object sender, EventArgs e)
+        {
+            int id;
+            string Nome = tb_UsuarioNome.Text;
+            string Sobrenome = tb_UsuarioSobrenome.Text;
+            string User = tb_userAcesso.Text;
+            string Senha = tb_senhaAcesso.Text;
+
+            try
+            {
+                id = Convert.ToInt32(tb_idUsuario.Text);
+
+                if (Nome.Trim().Equals("") || Sobrenome.Trim().Equals("") || User.Trim().Equals(""))
+                {
+                    MessageBox.Show("Preencha os campos corretamente", "ERRO");
+                }
+                else
+                {
+                    Boolean testeEditar = u.editarUsuario(id, Nome, Sobrenome, User);
+                    if (testeEditar)
+                    {
+                        dtgv_usuarios.DataSource = u.getUsuarios();
+                        MessageBox.Show("Usuário editado com sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Falha na edição");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro de Identificação");
+            }
+
+        }
+
+        //Função de seleção dos dados da tabela para as caixas de texto
+        private void dtgv_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_idUsuario.Text = dtgv_usuarios.CurrentRow.Cells[0].Value.ToString();
+            tb_UsuarioNome.Text = dtgv_usuarios.CurrentRow.Cells[1].Value.ToString();
+            tb_UsuarioSobrenome.Text = dtgv_usuarios.CurrentRow.Cells[2].Value.ToString();
+            tb_userAcesso.Text = dtgv_usuarios.CurrentRow.Cells[3].Value.ToString();
+          //  tb_senhaAcesso.Text = dtgv_usuarios.CurrentRow.Cells[4].Value.ToString();
+        }
+
+       
     }
 }
