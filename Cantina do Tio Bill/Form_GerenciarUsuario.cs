@@ -13,6 +13,7 @@ namespace Cantina_do_Tio_Bill
 {
     public partial class Form_GerenciarUsuario : Form
     {
+        Usuario u = new Usuario();
         public Form_GerenciarUsuario()
         {
             InitializeComponent();
@@ -29,23 +30,36 @@ namespace Cantina_do_Tio_Bill
 
         private void btn_AddUsuario_Click(object sender, EventArgs e)
         {
-            Usuario u = new Usuario();
+      
 
             string Nome = tb_UsuarioNome.Text;
             string Sobrenome = tb_UsuarioSobrenome.Text;
             string User = tb_userAcesso.Text;
             string Senha = tb_senhaAcesso.Text;
 
-            Boolean testeInserir  = u.InserirUsuario(Nome,Sobrenome,User,Senha);
 
-            if(testeInserir)
+            if (Nome.Trim().Equals("") || Sobrenome.Trim().Equals("") || User.Trim().Equals("") || Senha.Trim().Equals(""))
             {
-                MessageBox.Show("Novo usuário inserido com sucesso");
+                MessageBox.Show("Preencha os campos corretamente", "Erro");
             }
             else
             {
-                MessageBox.Show("Falha na inserção");
+                Boolean testeInserir = u.InserirUsuario(Nome, Sobrenome, User, Senha);
+                if (testeInserir)
+                {
+                    dtgv_usuarios.DataSource = u.getUsuarios();
+                    MessageBox.Show("Novo usuário inserido com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Falha na inserção");
+                }
             }
+        }
+
+        private void Form_GerenciarUsuario_Load(object sender, EventArgs e)
+        {
+            dtgv_usuarios.DataSource = u.getUsuarios();
         }
     }
 }

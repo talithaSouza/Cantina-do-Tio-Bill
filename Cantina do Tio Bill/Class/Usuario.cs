@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Cantina_do_Tio_Bill.Class
 {
@@ -44,6 +45,19 @@ namespace Cantina_do_Tio_Bill.Class
             }
 
 
+        }
+
+        //Função para retornar a lista de usuarios cadastrados
+        public DataTable getUsuarios()
+        {
+            MySqlCommand comando = new MySqlCommand("SELECT id, nome, sobrenome, user FROM `usuarios` LIMIT 0, 25", conexao.getConexao());
+            MySqlDataAdapter adaptar = new MySqlDataAdapter();
+            DataTable tabela = new DataTable();
+
+            adaptar.SelectCommand = comando;
+            adaptar.Fill(tabela);
+
+            return tabela;
         }
 
     }

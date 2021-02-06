@@ -33,7 +33,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_LimparCamposCliente = new System.Windows.Forms.Button();
             this.btn_EditarUsuario = new System.Windows.Forms.Button();
             this.btn_AddUsuario = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgv_usuarios = new System.Windows.Forms.DataGridView();
             this.tb_UsuarioNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_UsuarioSobrenome = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_senhaAcesso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_userAcesso = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_usuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -96,13 +96,16 @@ namespace Cantina_do_Tio_Bill
             this.btn_AddUsuario.UseVisualStyleBackColor = true;
             this.btn_AddUsuario.Click += new System.EventHandler(this.btn_AddUsuario_Click);
             // 
-            // dataGridView1
+            // dtgv_usuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(439, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 368);
-            this.dataGridView1.TabIndex = 16;
+            this.dtgv_usuarios.AllowUserToAddRows = false;
+            this.dtgv_usuarios.AllowUserToDeleteRows = false;
+            this.dtgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_usuarios.Location = new System.Drawing.Point(439, 95);
+            this.dtgv_usuarios.Name = "dtgv_usuarios";
+            this.dtgv_usuarios.ReadOnly = true;
+            this.dtgv_usuarios.Size = new System.Drawing.Size(420, 368);
+            this.dtgv_usuarios.TabIndex = 16;
             // 
             // tb_UsuarioNome
             // 
@@ -184,7 +187,7 @@ namespace Cantina_do_Tio_Bill
             this.panel1.Controls.Add(this.btn_LimparCamposCliente);
             this.panel1.Controls.Add(this.btn_EditarUsuario);
             this.panel1.Controls.Add(this.btn_AddUsuario);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dtgv_usuarios);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -276,7 +279,8 @@ namespace Cantina_do_Tio_Bill
             this.Controls.Add(this.panel1);
             this.Name = "Form_GerenciarUsuario";
             this.Text = "Form_GerenciarUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form_GerenciarUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_usuarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -290,7 +294,7 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.Button btn_LimparCamposCliente;
         private System.Windows.Forms.Button btn_EditarUsuario;
         private System.Windows.Forms.Button btn_AddUsuario;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgv_usuarios;
         private System.Windows.Forms.TextBox tb_UsuarioNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_UsuarioSobrenome;

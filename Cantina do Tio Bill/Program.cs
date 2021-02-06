@@ -16,7 +16,7 @@ namespace Cantina_do_Tio_Bill
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Login());
+            Application.Run(new Form_GerenciarUsuario());
         }
     }
 }
