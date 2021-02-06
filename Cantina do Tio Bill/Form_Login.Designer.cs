@@ -91,7 +91,7 @@ namespace Cantina_do_Tio_Bill
             this.groupBox1.Controls.Add(this.tb_usuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(11, 310);
+            this.groupBox1.Location = new System.Drawing.Point(11, 295);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(407, 204);
             this.groupBox1.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_entrar.AccessibleName = "";
             this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.Location = new System.Drawing.Point(160, 116);
+            this.btn_entrar.Location = new System.Drawing.Point(174, 98);
             this.btn_entrar.Name = "btn_entrar";
             this.btn_entrar.Size = new System.Drawing.Size(113, 23);
             this.btn_entrar.TabIndex = 2;
@@ -156,7 +156,7 @@ namespace Cantina_do_Tio_Bill
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(164, 255);
+            this.label5.Location = new System.Drawing.Point(178, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 42);
             this.label5.TabIndex = 2;
@@ -165,7 +165,7 @@ namespace Cantina_do_Tio_Bill
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cantina_do_Tio_Bill.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 71);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

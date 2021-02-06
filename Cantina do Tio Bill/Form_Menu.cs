@@ -22,5 +22,13 @@ namespace Cantina_do_Tio_Bill
             Form_GerenciarCliente form_GerenciarCliente = new Form_GerenciarCliente();
             form_GerenciarCliente.ShowDialog();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_GerenciarUsuario form_GerenciarUsuario = new Form_GerenciarUsuario();
+
+            form_GerenciarUsuario.ShowDialog();
+
+        }
     }
 }

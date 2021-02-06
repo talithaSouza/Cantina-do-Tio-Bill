@@ -31,6 +31,7 @@ namespace Cantina_do_Tio_Bill
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarQuentinhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,15 +43,23 @@ namespace Cantina_do_Tio_Bill
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gerenciarClienteToolStripMenuItem,
-            this.gerenciarQuentinhasToolStripMenuItem,
             this.pedidosToolStripMenuItem,
+            this.gerenciarQuentinhasToolStripMenuItem,
+            this.usuáriosToolStripMenuItem,
+            this.gerenciarClienteToolStripMenuItem,
             this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(606, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // gerenciarClienteToolStripMenuItem
             // 
@@ -62,8 +71,8 @@ namespace Cantina_do_Tio_Bill
             // gerenciarQuentinhasToolStripMenuItem
             // 
             this.gerenciarQuentinhasToolStripMenuItem.Name = "gerenciarQuentinhasToolStripMenuItem";
-            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
-            this.gerenciarQuentinhasToolStripMenuItem.Text = "Gerenciar Quentinhas";
+            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.gerenciarQuentinhasToolStripMenuItem.Text = "Quentinhas";
             // 
             // pedidosToolStripMenuItem
             // 
@@ -108,5 +117,6 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
     }
 }

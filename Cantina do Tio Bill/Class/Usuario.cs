@@ -8,25 +8,27 @@ using System.Threading.Tasks;
 
 namespace Cantina_do_Tio_Bill.Class
 {
-    public class Cliente
+    public class Usuario
     {
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public string Telefone { get; set; }
+        public string User { get; set; }
+        public string Senha { get; set; }
 
         CONEXAO conexao = new CONEXAO();
 
-        public bool InserirCliente(string nome, string sbnome, string telefone)
+        public bool InserirUsuario(string nome, string sobrenome, string user, string senha)
         {
             MySqlCommand command = new MySqlCommand();
-            string InsertQuery = "INSERT INTO `clientes`(`Nome`, `Sobrenome`, `Telefone`) VALUES (@nome,@sbnome,@tlfone)";
+            string InsertQuery = "INSERT INTO `usuarios`(`nome`, `sobrenome`, `user`, `senha`) VALUES (@nome,@sbnome,@user, @senha)";
             command.CommandText = InsertQuery;
             command.Connection = conexao.getConexao();
 
             //,,@
             command.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
-            command.Parameters.Add("@sbnome", MySqlDbType.VarChar).Value = sbnome;
-            command.Parameters.Add("@tlfone", MySqlDbType.VarChar).Value = telefone;
+            command.Parameters.Add("@sbnome", MySqlDbType.VarChar).Value = sobrenome;
+            command.Parameters.Add("@user", MySqlDbType.VarChar).Value = user;
+            command.Parameters.Add("@senha", MySqlDbType.VarChar).Value = senha;
 
             conexao.abrirConexao();
 
@@ -41,7 +43,8 @@ namespace Cantina_do_Tio_Bill.Class
                 return false;
             }
 
-            
+
         }
+
     }
 }

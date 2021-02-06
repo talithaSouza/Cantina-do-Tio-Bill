@@ -32,11 +32,11 @@ namespace Cantina_do_Tio_Bill
 
         private void btn_AdcCliente_Click(object sender, EventArgs e)
         {
-                 cliente.Nome = tb_ClienteNome.Text;
-            cliente.Sobrenome = tb_ClienteSobrenome.Text;
-             cliente.Telefone = tb_ClienteTelefone.Text;
+                 string nome = tb_ClienteNome.Text;
+            string sobrenome = tb_ClienteSobrenome.Text;
+             string telefone = tb_ClienteTelefone.Text;
 
-            Boolean TesteInserirCliente = cliente.InserirCliente(cliente);
+            Boolean TesteInserirCliente = cliente.InserirCliente(nome,sobrenome,telefone);
 
             if (TesteInserirCliente)
             {
