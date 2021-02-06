@@ -30,7 +30,7 @@ namespace Cantina_do_Tio_Bill
         private void InitializeComponent()
         {
             this.btn_RemoverUsuario = new System.Windows.Forms.Button();
-            this.btn_LimparCamposCliente = new System.Windows.Forms.Button();
+            this.btn_LimparCamposUsuario = new System.Windows.Forms.Button();
             this.btn_EditarUsuario = new System.Windows.Forms.Button();
             this.btn_AddUsuario = new System.Windows.Forms.Button();
             this.dtgv_usuarios = new System.Windows.Forms.DataGridView();
@@ -62,15 +62,17 @@ namespace Cantina_do_Tio_Bill
             this.btn_RemoverUsuario.TabIndex = 20;
             this.btn_RemoverUsuario.Text = "Remover";
             this.btn_RemoverUsuario.UseVisualStyleBackColor = true;
+            this.btn_RemoverUsuario.Click += new System.EventHandler(this.btn_RemoverUsuario_Click);
             // 
-            // btn_LimparCamposCliente
+            // btn_LimparCamposUsuario
             // 
-            this.btn_LimparCamposCliente.Location = new System.Drawing.Point(12, 401);
-            this.btn_LimparCamposCliente.Name = "btn_LimparCamposCliente";
-            this.btn_LimparCamposCliente.Size = new System.Drawing.Size(333, 23);
-            this.btn_LimparCamposCliente.TabIndex = 19;
-            this.btn_LimparCamposCliente.Text = "Limpar Campos";
-            this.btn_LimparCamposCliente.UseVisualStyleBackColor = true;
+            this.btn_LimparCamposUsuario.Location = new System.Drawing.Point(12, 401);
+            this.btn_LimparCamposUsuario.Name = "btn_LimparCamposUsuario";
+            this.btn_LimparCamposUsuario.Size = new System.Drawing.Size(333, 23);
+            this.btn_LimparCamposUsuario.TabIndex = 19;
+            this.btn_LimparCamposUsuario.Text = "Limpar Campos";
+            this.btn_LimparCamposUsuario.UseVisualStyleBackColor = true;
+            this.btn_LimparCamposUsuario.Click += new System.EventHandler(this.btn_LimparCamposUsuario_Click);
             // 
             // btn_EditarUsuario
             // 
@@ -167,7 +169,7 @@ namespace Cantina_do_Tio_Bill
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.Controls.Add(this.btn_RemoverUsuario);
-            this.panel1.Controls.Add(this.btn_LimparCamposCliente);
+            this.panel1.Controls.Add(this.btn_LimparCamposUsuario);
             this.panel1.Controls.Add(this.btn_EditarUsuario);
             this.panel1.Controls.Add(this.btn_AddUsuario);
             this.panel1.Controls.Add(this.dtgv_usuarios);
@@ -269,7 +271,7 @@ namespace Cantina_do_Tio_Bill
 
         #endregion
         private System.Windows.Forms.Button btn_RemoverUsuario;
-        private System.Windows.Forms.Button btn_LimparCamposCliente;
+        private System.Windows.Forms.Button btn_LimparCamposUsuario;
         private System.Windows.Forms.Button btn_EditarUsuario;
         private System.Windows.Forms.Button btn_AddUsuario;
         private System.Windows.Forms.DataGridView dtgv_usuarios;

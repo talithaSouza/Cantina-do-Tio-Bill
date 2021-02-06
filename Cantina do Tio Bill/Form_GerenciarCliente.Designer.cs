@@ -329,6 +329,7 @@ namespace Cantina_do_Tio_Bill
             this.Controls.Add(this.panel1);
             this.Name = "Form_GerenciarCliente";
             this.Text = "Form_GerenciarCliente";
+            this.Load += new System.EventHandler(this.Form_GerenciarCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

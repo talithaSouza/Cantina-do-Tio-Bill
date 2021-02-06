@@ -109,6 +109,33 @@ namespace Cantina_do_Tio_Bill
           //  tb_senhaAcesso.Text = dtgv_usuarios.CurrentRow.Cells[4].Value.ToString();
         }
 
-       
+        private void btn_RemoverUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(tb_idUsuario.Text);
+
+                if (u.removerUsuario(id))
+                {
+                    dtgv_usuarios.DataSource = u.getUsuarios();
+                    MessageBox.Show("Usuário foi removido com sucesso");
+
+                    //btn.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possivel excluir o usuário");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro de Identificação");
+            }
+        }
+
+        private void btn_LimparCamposUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

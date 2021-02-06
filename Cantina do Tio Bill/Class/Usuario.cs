@@ -95,11 +95,24 @@ namespace Cantina_do_Tio_Bill.Class
         public bool removerUsuario(int id)
         {
             MySqlCommand comando = new MySqlCommand();
-            string editQuery = "UPDATE `usuarios` SET `nome`=@nome,`sobrenome`=@sbnome,`user`=@user WHERE `id`=@uid";
-            comando.CommandText = editQuery;
+            string removeQuery = "DELETE FROM `usuarios` WHERE `id` = @uid";
+            comando.CommandText = removeQuery;
             comando.Connection = conexao.getConexao();
 
             comando.Parameters.Add("@uid", MySqlDbType.Int32).Value = id;
+
+            conexao.abrirConexao();
+
+            if (comando.ExecuteNonQuery() == 1)
+            {
+                conexao.fecharConexao();
+                return true;
+            }
+            else
+            {
+                conexao.fecharConexao();
+                return false;
+            }
         }
 
     }

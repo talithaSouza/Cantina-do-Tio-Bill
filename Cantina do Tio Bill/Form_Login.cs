@@ -47,13 +47,14 @@ namespace Cantina_do_Tio_Bill
             //usuario e senha corretos
             if(tabela.Rows.Count > 0)
             {
+                
                 this.Hide();
                 Form_Menu form_Menu = new Form_Menu();
                 form_Menu.ShowDialog();
             }
             else
             {
-                MessageBox.Show("falso");
+                MessageBox.Show("usuário ou senha incorretos");
             }
 
         }

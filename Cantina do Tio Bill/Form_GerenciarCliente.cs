@@ -44,5 +44,10 @@ namespace Cantina_do_Tio_Bill
             }
 
         }
+
+        private void Form_GerenciarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,22 +31,24 @@ namespace Cantina_do_Tio_Bill
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerenciarQuentinhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerenciarQuentinhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pedidosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pedidosToolStripMenuItem,
-            this.gerenciarQuentinhasToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
             this.gerenciarClienteToolStripMenuItem,
+            this.gerenciarQuentinhasToolStripMenuItem,
+            this.pedidosClientesToolStripMenuItem,
+            this.pedidosToolStripMenuItem,
             this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -54,11 +56,23 @@ namespace Cantina_do_Tio_Bill
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // pedidosToolStripMenuItem
+            // 
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            // 
+            // gerenciarQuentinhasToolStripMenuItem
+            // 
+            this.gerenciarQuentinhasToolStripMenuItem.Name = "gerenciarQuentinhasToolStripMenuItem";
+            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.gerenciarQuentinhasToolStripMenuItem.Text = "Quentinhas";
+            // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.usuáriosToolStripMenuItem.Text = "Gerenciar Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // gerenciarClienteToolStripMenuItem
@@ -67,18 +81,6 @@ namespace Cantina_do_Tio_Bill
             this.gerenciarClienteToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
             this.gerenciarClienteToolStripMenuItem.Text = "Gerenciar Cliente";
             this.gerenciarClienteToolStripMenuItem.Click += new System.EventHandler(this.gerenciarClienteToolStripMenuItem_Click);
-            // 
-            // gerenciarQuentinhasToolStripMenuItem
-            // 
-            this.gerenciarQuentinhasToolStripMenuItem.Name = "gerenciarQuentinhasToolStripMenuItem";
-            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.gerenciarQuentinhasToolStripMenuItem.Text = "Quentinhas";
-            // 
-            // pedidosToolStripMenuItem
-            // 
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -90,6 +92,12 @@ namespace Cantina_do_Tio_Bill
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pedidosClientesToolStripMenuItem
+            // 
+            this.pedidosClientesToolStripMenuItem.Name = "pedidosClientesToolStripMenuItem";
+            this.pedidosClientesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.pedidosClientesToolStripMenuItem.Text = "Pedidos Clientes";
             // 
             // Form_Menu
             // 
@@ -118,5 +126,6 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidosClientesToolStripMenuItem;
     }
 }
