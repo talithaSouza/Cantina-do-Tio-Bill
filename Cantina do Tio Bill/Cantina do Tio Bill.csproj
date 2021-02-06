@@ -59,6 +59,12 @@
     <Compile Include="Form_GerenciarCliente.Designer.cs">
       <DependentUpon>Form_GerenciarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_GerenciarQuentinhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GerenciarQuentinhas.Designer.cs">
+      <DependentUpon>Form_GerenciarQuentinhas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_GerenciarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_GerenciarCliente.resx">
       <DependentUpon>Form_GerenciarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GerenciarQuentinhas.resx">
+      <DependentUpon>Form_GerenciarQuentinhas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_GerenciarUsuario.resx">
       <DependentUpon>Form_GerenciarUsuario.cs</DependentUpon>
@@ -115,6 +124,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\comida.png" />
     <Content Include="img\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

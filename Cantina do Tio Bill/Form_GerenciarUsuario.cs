@@ -21,16 +21,16 @@ namespace Cantina_do_Tio_Bill
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            if(tb_UsuarioNome.Text != "" && tb_UsuarioSobrenome.Text != "")
+            if (tb_UsuarioNome.Text != "" && tb_UsuarioSobrenome.Text != "")
             {
-                string v = string.Concat(tb_UsuarioNome.Text,"_",tb_UsuarioSobrenome.Text);
+                string v = string.Concat(tb_UsuarioNome.Text, "_", tb_UsuarioSobrenome.Text);
                 tb_userAcesso.Text = v;
             }
         }
 
         private void btn_AddUsuario_Click(object sender, EventArgs e)
         {
-      
+
 
             string Nome = tb_UsuarioNome.Text;
             string Sobrenome = tb_UsuarioSobrenome.Text;
@@ -49,6 +49,7 @@ namespace Cantina_do_Tio_Bill
                 {
                     dtgv_usuarios.DataSource = u.getUsuarios();
                     MessageBox.Show("Novo usuário inserido com sucesso");
+                    btn_LimparCamposUsuario.PerformClick();
                 }
                 else
                 {
@@ -68,7 +69,6 @@ namespace Cantina_do_Tio_Bill
             string Nome = tb_UsuarioNome.Text;
             string Sobrenome = tb_UsuarioSobrenome.Text;
             string User = tb_userAcesso.Text;
-            string Senha = tb_senhaAcesso.Text;
 
             try
             {
@@ -85,6 +85,7 @@ namespace Cantina_do_Tio_Bill
                     {
                         dtgv_usuarios.DataSource = u.getUsuarios();
                         MessageBox.Show("Usuário editado com sucesso");
+                        btn_LimparCamposUsuario.PerformClick();
                     }
                     else
                     {
@@ -92,7 +93,7 @@ namespace Cantina_do_Tio_Bill
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro de Identificação");
             }
@@ -106,7 +107,7 @@ namespace Cantina_do_Tio_Bill
             tb_UsuarioNome.Text = dtgv_usuarios.CurrentRow.Cells[1].Value.ToString();
             tb_UsuarioSobrenome.Text = dtgv_usuarios.CurrentRow.Cells[2].Value.ToString();
             tb_userAcesso.Text = dtgv_usuarios.CurrentRow.Cells[3].Value.ToString();
-          //  tb_senhaAcesso.Text = dtgv_usuarios.CurrentRow.Cells[4].Value.ToString();
+            //  tb_senhaAcesso.Text = dtgv_usuarios.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void btn_RemoverUsuario_Click(object sender, EventArgs e)
@@ -120,14 +121,14 @@ namespace Cantina_do_Tio_Bill
                     dtgv_usuarios.DataSource = u.getUsuarios();
                     MessageBox.Show("Usuário foi removido com sucesso");
 
-                    //btn.PerformClick();
+                    btn_LimparCamposUsuario.PerformClick();
                 }
                 else
                 {
                     MessageBox.Show("Não foi possivel excluir o usuário");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro de Identificação");
             }
@@ -135,6 +136,12 @@ namespace Cantina_do_Tio_Bill
 
         private void btn_LimparCamposUsuario_Click(object sender, EventArgs e)
         {
+
+            tb_UsuarioNome.Text = "";
+            tb_UsuarioSobrenome.Text = "";
+            tb_userAcesso.Text = "";
+            tb_senhaAcesso.Text = "";
+            tb_idUsuario.Text = "";
 
         }
     }

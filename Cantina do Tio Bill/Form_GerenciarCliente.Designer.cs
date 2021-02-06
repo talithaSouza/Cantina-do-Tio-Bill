@@ -34,7 +34,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_LimparCamposCliente = new System.Windows.Forms.Button();
             this.btn_EditarCliente = new System.Windows.Forms.Button();
             this.btn_AdcCliente = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.tb_ClienteNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_ClienteSobrenome = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@ namespace Cantina_do_Tio_Bill
             this.label3 = new System.Windows.Forms.Label();
             this.tb_Bairro = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Cantina_do_Tio_Bill
             this.panel1.Controls.Add(this.btn_LimparCamposCliente);
             this.panel1.Controls.Add(this.btn_EditarCliente);
             this.panel1.Controls.Add(this.btn_AdcCliente);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewClientes);
             this.panel1.Controls.Add(this.tb_ClienteNome);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.tb_ClienteSobrenome);
@@ -94,6 +94,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_RemoverCliente.TabIndex = 20;
             this.btn_RemoverCliente.Text = "Remover";
             this.btn_RemoverCliente.UseVisualStyleBackColor = true;
+            this.btn_RemoverCliente.Click += new System.EventHandler(this.btn_RemoverCliente_Click);
             // 
             // btn_LimparCamposCliente
             // 
@@ -114,6 +115,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_EditarCliente.TabIndex = 18;
             this.btn_EditarCliente.Text = "Editar";
             this.btn_EditarCliente.UseVisualStyleBackColor = true;
+            this.btn_EditarCliente.Click += new System.EventHandler(this.btn_EditarCliente_Click_1);
             // 
             // btn_AdcCliente
             // 
@@ -127,13 +129,17 @@ namespace Cantina_do_Tio_Bill
             this.btn_AdcCliente.UseVisualStyleBackColor = true;
             this.btn_AdcCliente.Click += new System.EventHandler(this.btn_AdcCliente_Click);
             // 
-            // dataGridView1
+            // dataGridViewClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(437, 329);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 219);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridViewClientes.AllowUserToAddRows = false;
+            this.dataGridViewClientes.AllowUserToDeleteRows = false;
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(397, 290);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.ReadOnly = true;
+            this.dataGridViewClientes.Size = new System.Drawing.Size(431, 258);
+            this.dataGridViewClientes.TabIndex = 16;
+            this.dataGridViewClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellClick_1);
             // 
             // tb_ClienteNome
             // 
@@ -191,6 +197,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_IdCliente.Enabled = false;
             this.tb_IdCliente.Location = new System.Drawing.Point(150, 109);
             this.tb_IdCliente.Name = "tb_IdCliente";
+            this.tb_IdCliente.ReadOnly = true;
             this.tb_IdCliente.Size = new System.Drawing.Size(54, 20);
             this.tb_IdCliente.TabIndex = 2;
             // 
@@ -248,7 +255,7 @@ namespace Cantina_do_Tio_Bill
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(437, 84);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(391, 230);
+            this.groupBox2.Size = new System.Drawing.Size(391, 187);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço do cliente";
@@ -332,7 +339,7 @@ namespace Cantina_do_Tio_Bill
             this.Load += new System.EventHandler(this.Form_GerenciarCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -367,6 +374,6 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.Button btn_LimparCamposCliente;
         private System.Windows.Forms.Button btn_EditarCliente;
         private System.Windows.Forms.Button btn_AdcCliente;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewClientes;
     }
 }
