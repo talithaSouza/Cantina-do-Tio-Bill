@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Class\Cliente.cs" />
     <Compile Include="Class\CONEXAO.cs" />
+    <Compile Include="Class\Quentinha.cs" />
     <Compile Include="Class\Usuario.cs" />
     <Compile Include="Form_GerenciarCliente.cs">
       <SubType>Form</SubType>

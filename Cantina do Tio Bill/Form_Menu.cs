@@ -30,5 +30,12 @@ namespace Cantina_do_Tio_Bill
             form_GerenciarUsuario.ShowDialog();
 
         }
+
+        private void gerenciarQuentinhasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_GerenciarQuentinhas form_GerenciarQuentinhas = new Form_GerenciarQuentinhas();
+
+            form_GerenciarQuentinhas.ShowDialog();
+        }
     }
 }

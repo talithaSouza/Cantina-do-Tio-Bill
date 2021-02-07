@@ -31,13 +31,13 @@ namespace Cantina_do_Tio_Bill
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerenciarQuentinhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerenciarQuentinhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pedidosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,18 +56,6 @@ namespace Cantina_do_Tio_Bill
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pedidosToolStripMenuItem
-            // 
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
-            // 
-            // gerenciarQuentinhasToolStripMenuItem
-            // 
-            this.gerenciarQuentinhasToolStripMenuItem.Name = "gerenciarQuentinhasToolStripMenuItem";
-            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.gerenciarQuentinhasToolStripMenuItem.Text = "Quentinhas";
-            // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
@@ -82,6 +70,25 @@ namespace Cantina_do_Tio_Bill
             this.gerenciarClienteToolStripMenuItem.Text = "Gerenciar Cliente";
             this.gerenciarClienteToolStripMenuItem.Click += new System.EventHandler(this.gerenciarClienteToolStripMenuItem_Click);
             // 
+            // gerenciarQuentinhasToolStripMenuItem
+            // 
+            this.gerenciarQuentinhasToolStripMenuItem.Name = "gerenciarQuentinhasToolStripMenuItem";
+            this.gerenciarQuentinhasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.gerenciarQuentinhasToolStripMenuItem.Text = "Quentinhas";
+            this.gerenciarQuentinhasToolStripMenuItem.Click += new System.EventHandler(this.gerenciarQuentinhasToolStripMenuItem_Click);
+            // 
+            // pedidosClientesToolStripMenuItem
+            // 
+            this.pedidosClientesToolStripMenuItem.Name = "pedidosClientesToolStripMenuItem";
+            this.pedidosClientesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.pedidosClientesToolStripMenuItem.Text = "Pedidos Clientes";
+            // 
+            // pedidosToolStripMenuItem
+            // 
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
@@ -92,12 +99,6 @@ namespace Cantina_do_Tio_Bill
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // pedidosClientesToolStripMenuItem
-            // 
-            this.pedidosClientesToolStripMenuItem.Name = "pedidosClientesToolStripMenuItem";
-            this.pedidosClientesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.pedidosClientesToolStripMenuItem.Text = "Pedidos Clientes";
             // 
             // Form_Menu
             // 
