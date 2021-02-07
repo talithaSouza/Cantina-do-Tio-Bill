@@ -52,8 +52,15 @@
   <ItemGroup>
     <Compile Include="Class\Cliente.cs" />
     <Compile Include="Class\CONEXAO.cs" />
+    <Compile Include="Class\Pedidos.cs" />
     <Compile Include="Class\Quentinha.cs" />
     <Compile Include="Class\Usuario.cs" />
+    <Compile Include="Form_FazerPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FazerPedidos.Designer.cs">
+      <DependentUpon>Form_FazerPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_GerenciarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_FazerPedidos.resx">
+      <DependentUpon>Form_FazerPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_GerenciarCliente.resx">
       <DependentUpon>Form_GerenciarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +137,10 @@
   <ItemGroup>
     <Content Include="img\comida.png" />
     <Content Include="img\login.png" />
+    <Content Include="img\pratoCoração.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BD\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

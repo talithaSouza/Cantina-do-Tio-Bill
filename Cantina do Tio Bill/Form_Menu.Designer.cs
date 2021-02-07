@@ -80,8 +80,9 @@ namespace Cantina_do_Tio_Bill
             // pedidosClientesToolStripMenuItem
             // 
             this.pedidosClientesToolStripMenuItem.Name = "pedidosClientesToolStripMenuItem";
-            this.pedidosClientesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.pedidosClientesToolStripMenuItem.Text = "Pedidos Clientes";
+            this.pedidosClientesToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.pedidosClientesToolStripMenuItem.Text = "Cadastrar Pedido";
+            this.pedidosClientesToolStripMenuItem.Click += new System.EventHandler(this.pedidosClientesToolStripMenuItem_Click);
             // 
             // pedidosToolStripMenuItem
             // 

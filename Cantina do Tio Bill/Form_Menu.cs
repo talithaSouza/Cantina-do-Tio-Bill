@@ -37,5 +37,11 @@ namespace Cantina_do_Tio_Bill
 
             form_GerenciarQuentinhas.ShowDialog();
         }
+
+        private void pedidosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_FazerPedidos form_FazerPedidos = new Form_FazerPedidos();
+            form_FazerPedidos.ShowDialog();
+        }
     }
 }

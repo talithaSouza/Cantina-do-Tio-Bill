@@ -79,5 +79,15 @@ namespace Cantina_do_Tio_Bill.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pratoCoração {
+            get {
+                object obj = ResourceManager.GetObject("pratoCoração", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
