@@ -47,8 +47,6 @@ namespace Cantina_do_Tio_Bill
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_RefeEndeco = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_NumEndereco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -146,7 +144,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_ClienteNome.Location = new System.Drawing.Point(150, 148);
             this.tb_ClienteNome.Name = "tb_ClienteNome";
             this.tb_ClienteNome.Size = new System.Drawing.Size(179, 20);
-            this.tb_ClienteNome.TabIndex = 12;
+            this.tb_ClienteNome.TabIndex = 1;
             // 
             // label7
             // 
@@ -163,7 +161,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_ClienteSobrenome.Location = new System.Drawing.Point(150, 190);
             this.tb_ClienteSobrenome.Name = "tb_ClienteSobrenome";
             this.tb_ClienteSobrenome.Size = new System.Drawing.Size(179, 20);
-            this.tb_ClienteSobrenome.TabIndex = 10;
+            this.tb_ClienteSobrenome.TabIndex = 2;
             // 
             // label6
             // 
@@ -180,7 +178,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_ClienteTelefone.Location = new System.Drawing.Point(150, 237);
             this.tb_ClienteTelefone.Name = "tb_ClienteTelefone";
             this.tb_ClienteTelefone.Size = new System.Drawing.Size(179, 20);
-            this.tb_ClienteTelefone.TabIndex = 8;
+            this.tb_ClienteTelefone.TabIndex = 3;
             // 
             // label5
             // 
@@ -244,8 +242,6 @@ namespace Cantina_do_Tio_Bill
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.tb_RefeEndeco);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.tb_NumEndereco);
             this.groupBox2.Controls.Add(this.label4);
@@ -260,28 +256,11 @@ namespace Cantina_do_Tio_Bill
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço do cliente";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 125);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Referencia:";
-            // 
-            // tb_RefeEndeco
-            // 
-            this.tb_RefeEndeco.Location = new System.Drawing.Point(140, 126);
-            this.tb_RefeEndeco.Name = "tb_RefeEndeco";
-            this.tb_RefeEndeco.Size = new System.Drawing.Size(215, 26);
-            this.tb_RefeEndeco.TabIndex = 10;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(264, 78);
+            this.label8.Location = new System.Drawing.Point(45, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 25);
             this.label8.TabIndex = 7;
@@ -289,10 +268,10 @@ namespace Cantina_do_Tio_Bill
             // 
             // tb_NumEndereco
             // 
-            this.tb_NumEndereco.Location = new System.Drawing.Point(311, 79);
+            this.tb_NumEndereco.Location = new System.Drawing.Point(92, 112);
             this.tb_NumEndereco.Name = "tb_NumEndereco";
             this.tb_NumEndereco.Size = new System.Drawing.Size(59, 26);
-            this.tb_NumEndereco.TabIndex = 8;
+            this.tb_NumEndereco.TabIndex = 6;
             // 
             // label4
             // 
@@ -309,7 +288,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_Rua.Location = new System.Drawing.Point(83, 78);
             this.tb_Rua.Name = "tb_Rua";
             this.tb_Rua.Size = new System.Drawing.Size(175, 26);
-            this.tb_Rua.TabIndex = 6;
+            this.tb_Rua.TabIndex = 5;
             // 
             // label3
             // 
@@ -362,8 +341,6 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tb_RefeEndeco;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_NumEndereco;
         private System.Windows.Forms.Label label4;

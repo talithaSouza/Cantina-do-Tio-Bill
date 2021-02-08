@@ -33,23 +33,24 @@ namespace Cantina_do_Tio_Bill
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_CodCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_CadatrarPedido = new System.Windows.Forms.Button();
-            this.tb_quantidade = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AdicionarQuentinha = new System.Windows.Forms.Button();
             this.tb_Total = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbbx_TiposQuentinhas = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridViewListaIngredientes = new System.Windows.Forms.DataGridView();
+            this.tabela_ver_quentinha = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabela_pedido = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaIngredientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabela_ver_quentinha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabela_pedido)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,12 +96,12 @@ namespace Cantina_do_Tio_Bill
             this.label2.TabIndex = 2;
             this.label2.Text = "Codigo Cliente:";
             // 
-            // textBox1
+            // tb_CodCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 3;
+            this.tb_CodCliente.Location = new System.Drawing.Point(143, 43);
+            this.tb_CodCliente.Name = "tb_CodCliente";
+            this.tb_CodCliente.Size = new System.Drawing.Size(77, 20);
+            this.tb_CodCliente.TabIndex = 3;
             // 
             // label3
             // 
@@ -118,54 +119,54 @@ namespace Cantina_do_Tio_Bill
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btn_CadatrarPedido);
-            this.panel1.Controls.Add(this.tb_quantidade);
+            this.panel1.Controls.Add(this.btn_AdicionarQuentinha);
             this.panel1.Controls.Add(this.tb_Total);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cbbx_TiposQuentinhas);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tb_CodCliente);
             this.panel1.Location = new System.Drawing.Point(12, 145);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 318);
             this.panel1.TabIndex = 5;
             // 
-            // btn_CadatrarPedido
+            // button2
             // 
-            this.btn_CadatrarPedido.Location = new System.Drawing.Point(20, 256);
-            this.btn_CadatrarPedido.Name = "btn_CadatrarPedido";
-            this.btn_CadatrarPedido.Size = new System.Drawing.Size(149, 23);
-            this.btn_CadatrarPedido.TabIndex = 11;
-            this.btn_CadatrarPedido.Text = "Cadastrar Novo Pedido";
-            this.btn_CadatrarPedido.UseVisualStyleBackColor = true;
-            this.btn_CadatrarPedido.Click += new System.EventHandler(this.btn_CadatrarPedido_Click);
+            this.button2.Location = new System.Drawing.Point(205, 256);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Finalizar Pedido";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // tb_quantidade
+            // btn_AdicionarQuentinha
             // 
-            this.tb_quantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_quantidade.Location = new System.Drawing.Point(143, 133);
-            this.tb_quantidade.Name = "tb_quantidade";
-            this.tb_quantidade.Size = new System.Drawing.Size(60, 20);
-            this.tb_quantidade.TabIndex = 10;
-            this.tb_quantidade.Text = "1";
-            this.tb_quantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_AdicionarQuentinha.Location = new System.Drawing.Point(20, 256);
+            this.btn_AdicionarQuentinha.Name = "btn_AdicionarQuentinha";
+            this.btn_AdicionarQuentinha.Size = new System.Drawing.Size(149, 23);
+            this.btn_AdicionarQuentinha.TabIndex = 11;
+            this.btn_AdicionarQuentinha.Text = "Adicionar Quentinha";
+            this.btn_AdicionarQuentinha.UseVisualStyleBackColor = true;
+            this.btn_AdicionarQuentinha.Click += new System.EventHandler(this.btn_AdicionarQuentinha_Click);
             // 
             // tb_Total
             // 
-            this.tb_Total.Location = new System.Drawing.Point(143, 176);
+            this.tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Total.Location = new System.Drawing.Point(143, 141);
             this.tb_Total.Name = "tb_Total";
             this.tb_Total.ReadOnly = true;
             this.tb_Total.Size = new System.Drawing.Size(77, 20);
             this.tb_Total.TabIndex = 9;
+            this.tb_Total.Text = "0,00";
+            this.tb_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(62, 172);
+            this.label6.Location = new System.Drawing.Point(62, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 8;
@@ -181,17 +182,6 @@ namespace Cantina_do_Tio_Bill
             this.cbbx_TiposQuentinhas.Text = "-----";
             this.cbbx_TiposQuentinhas.SelectedIndexChanged += new System.EventHandler(this.cbbx_TiposQuentinhas_SelectedIndexChanged);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Quantidade:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -203,36 +193,47 @@ namespace Cantina_do_Tio_Bill
             this.label4.TabIndex = 4;
             this.label4.Text = "Quentinha:";
             // 
-            // dataGridViewListaIngredientes
+            // tabela_ver_quentinha
             // 
-            this.dataGridViewListaIngredientes.AllowUserToAddRows = false;
-            this.dataGridViewListaIngredientes.AllowUserToDeleteRows = false;
-            this.dataGridViewListaIngredientes.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewListaIngredientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaIngredientes.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewListaIngredientes.Location = new System.Drawing.Point(430, 148);
-            this.dataGridViewListaIngredientes.Name = "dataGridViewListaIngredientes";
-            this.dataGridViewListaIngredientes.ReadOnly = true;
-            this.dataGridViewListaIngredientes.Size = new System.Drawing.Size(499, 315);
-            this.dataGridViewListaIngredientes.TabIndex = 6;
+            this.tabela_ver_quentinha.AllowUserToAddRows = false;
+            this.tabela_ver_quentinha.AllowUserToDeleteRows = false;
+            this.tabela_ver_quentinha.BackgroundColor = System.Drawing.Color.White;
+            this.tabela_ver_quentinha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabela_ver_quentinha.GridColor = System.Drawing.Color.Black;
+            this.tabela_ver_quentinha.Location = new System.Drawing.Point(430, 159);
+            this.tabela_ver_quentinha.Name = "tabela_ver_quentinha";
+            this.tabela_ver_quentinha.ReadOnly = true;
+            this.tabela_ver_quentinha.Size = new System.Drawing.Size(791, 74);
+            this.tabela_ver_quentinha.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(430, 469);
+            this.button1.Location = new System.Drawing.Point(114, 482);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "Ir para tela de pedidos >>>>";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // groupBox1
             // 
-            this.button2.Location = new System.Drawing.Point(205, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Finalizar Pedido";
-            this.button2.UseVisualStyleBackColor = true;
+            this.groupBox1.Location = new System.Drawing.Point(417, 142);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(815, 100);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ingredientes da Quentinha";
+            // 
+            // tabela_pedido
+            // 
+            this.tabela_pedido.AllowUserToAddRows = false;
+            this.tabela_pedido.AllowUserToDeleteRows = false;
+            this.tabela_pedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabela_pedido.Location = new System.Drawing.Point(440, 248);
+            this.tabela_pedido.Name = "tabela_pedido";
+            this.tabela_pedido.ReadOnly = true;
+            this.tabela_pedido.Size = new System.Drawing.Size(604, 180);
+            this.tabela_pedido.TabIndex = 14;
             // 
             // Form_FazerPedidos
             // 
@@ -241,12 +242,14 @@ namespace Cantina_do_Tio_Bill
             this.BackColor = System.Drawing.Color.Teal;
             this.BackgroundImage = global::Cantina_do_Tio_Bill.Properties.Resources.pratoCoração;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(941, 568);
+            this.ClientSize = new System.Drawing.Size(1233, 568);
+            this.Controls.Add(this.tabela_pedido);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridViewListaIngredientes);
+            this.Controls.Add(this.tabela_ver_quentinha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "Form_FazerPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -256,7 +259,8 @@ namespace Cantina_do_Tio_Bill
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaIngredientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabela_ver_quentinha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabela_pedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,18 +272,18 @@ namespace Cantina_do_Tio_Bill
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_CodCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbbx_TiposQuentinhas;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_Total;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_CadatrarPedido;
-        private System.Windows.Forms.TextBox tb_quantidade;
-        private System.Windows.Forms.DataGridView dataGridViewListaIngredientes;
+        private System.Windows.Forms.Button btn_AdicionarQuentinha;
+        private System.Windows.Forms.DataGridView tabela_ver_quentinha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView tabela_pedido;
     }
 }

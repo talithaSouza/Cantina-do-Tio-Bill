@@ -34,6 +34,7 @@ namespace Cantina_do_Tio_Bill
             this.btn_EditarQuentinha = new System.Windows.Forms.Button();
             this.dataGridVQuentinha = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,13 +58,12 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaOpCarne = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVQuentinha)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -124,6 +124,16 @@ namespace Cantina_do_Tio_Bill
             this.panel2.Size = new System.Drawing.Size(1061, 68);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cantina_do_Tio_Bill.Properties.Resources.comida;
+            this.pictureBox1.Location = new System.Drawing.Point(643, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -178,7 +188,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_ValorQuentinha.Location = new System.Drawing.Point(182, 294);
             this.tb_ValorQuentinha.Name = "tb_ValorQuentinha";
             this.tb_ValorQuentinha.Size = new System.Drawing.Size(179, 20);
-            this.tb_ValorQuentinha.TabIndex = 23;
+            this.tb_ValorQuentinha.TabIndex = 8;
             // 
             // label9
             // 
@@ -205,7 +215,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaIngrediente5.Location = new System.Drawing.Point(182, 258);
             this.tb_QuentinhaIngrediente5.Name = "tb_QuentinhaIngrediente5";
             this.tb_QuentinhaIngrediente5.Size = new System.Drawing.Size(179, 20);
-            this.tb_QuentinhaIngrediente5.TabIndex = 21;
+            this.tb_QuentinhaIngrediente5.TabIndex = 7;
             // 
             // label8
             // 
@@ -222,7 +232,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaIngrediente4.Location = new System.Drawing.Point(182, 223);
             this.tb_QuentinhaIngrediente4.Name = "tb_QuentinhaIngrediente4";
             this.tb_QuentinhaIngrediente4.Size = new System.Drawing.Size(179, 20);
-            this.tb_QuentinhaIngrediente4.TabIndex = 19;
+            this.tb_QuentinhaIngrediente4.TabIndex = 6;
             // 
             // btn_AddQuentinha
             // 
@@ -253,7 +263,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaIngrediente3.Location = new System.Drawing.Point(182, 188);
             this.tb_QuentinhaIngrediente3.Name = "tb_QuentinhaIngrediente3";
             this.tb_QuentinhaIngrediente3.Size = new System.Drawing.Size(179, 20);
-            this.tb_QuentinhaIngrediente3.TabIndex = 17;
+            this.tb_QuentinhaIngrediente3.TabIndex = 5;
             // 
             // tb_idQuentinha
             // 
@@ -278,7 +288,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaIngrediente2.Location = new System.Drawing.Point(182, 150);
             this.tb_QuentinhaIngrediente2.Name = "tb_QuentinhaIngrediente2";
             this.tb_QuentinhaIngrediente2.Size = new System.Drawing.Size(179, 20);
-            this.tb_QuentinhaIngrediente2.TabIndex = 6;
+            this.tb_QuentinhaIngrediente2.TabIndex = 4;
             // 
             // label3
             // 
@@ -295,7 +305,7 @@ namespace Cantina_do_Tio_Bill
             this.tb_QuentinhaIngrediente1.Location = new System.Drawing.Point(182, 114);
             this.tb_QuentinhaIngrediente1.Name = "tb_QuentinhaIngrediente1";
             this.tb_QuentinhaIngrediente1.Size = new System.Drawing.Size(179, 20);
-            this.tb_QuentinhaIngrediente1.TabIndex = 5;
+            this.tb_QuentinhaIngrediente1.TabIndex = 3;
             // 
             // label2
             // 
@@ -351,16 +361,6 @@ namespace Cantina_do_Tio_Bill
             this.panel1.Size = new System.Drawing.Size(1064, 555);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cantina_do_Tio_Bill.Properties.Resources.comida;
-            this.pictureBox1.Location = new System.Drawing.Point(643, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form_GerenciarQuentinhas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,10 +373,10 @@ namespace Cantina_do_Tio_Bill
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVQuentinha)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -14,6 +14,8 @@ namespace Cantina_do_Tio_Bill
     public partial class Form_FazerPedidos : Form
     {
         private int id_quentinha;
+        private int cont = 0;
+        private ItensDoPedido i = new ItensDoPedido();
 
         public Form_FazerPedidos()
         {
@@ -32,31 +34,41 @@ namespace Cantina_do_Tio_Bill
 
         private void cbbx_TiposQuentinhas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = (int)cbbx_TiposQuentinhas.SelectedIndex;
-            id_quentinha = id;
-            id++;
-            dataGridViewListaIngredientes.DataSource = p.retornaIngredientes(id);
-            tb_Total.Text = id.ToString();
+            string n = cbbx_TiposQuentinhas.Text;
+            // id_quentinha = id;
+            //id++;
+            tabela_ver_quentinha.DataSource = p.retornaIngredientes(n);
+            // tb_Total.Text = id.ToString();
         }
 
-        private void btn_CadatrarPedido_Click(object sender, EventArgs e)
+        decimal CalculaPedido(List<Quentinha> listaQuentinha)
         {
-            int quantidade;
+            decimal valor = 0;
 
-            if (!int.TryParse(tb_quantidade.Text, out quantidade))
-            {
-                MessageBox.Show("Digite apenas numero", "Erro na quantidade");
-                return;
-            }
+            foreach (var quentinha in listaQuentinha)
+                valor += quentinha.valor;
 
-            if (quantidade <= 0)
-            {
-                MessageBox.Show("Quantidade invalida", "Erro na quantidade");
-                return;
-            }
+            if (listaQuentinha.Count > 4)
+                valor += (2.5m * valor / 100);
 
-            p.addPedidoList(id_quentinha);
+            return valor;
+        }
 
+        private void btn_AdicionarQuentinha_Click(object sender, EventArgs e)
+        {
+            i.IdClient = int.Parse(tb_CodCliente.Text);
+            Quentinha qtnha = new Quentinha();
+            qtnha.id = int.Parse(tabela_pedido.CurrentRow.Cells[0].Value.ToString());
+            qtnha.Nome = cbbx_TiposQuentinhas.Text;
+            qtnha.OpCarne = tabela_pedido.CurrentRow.Cells[1].Value.ToString();
+            qtnha.ingre1 = tabela_pedido.CurrentRow.Cells[2].Value.ToString();
+            qtnha.ingre2 = tabela_pedido.CurrentRow.Cells[3].Value.ToString();
+            qtnha.ingre3 = tabela_pedido.CurrentRow.Cells[4].Value.ToString();
+            qtnha.ingre4 = tabela_pedido.CurrentRow.Cells[5].Value.ToString();
+            qtnha.ingre5 = tabela_pedido.CurrentRow.Cells[6].Value.ToString();
+            qtnha.valor = decimal.Parse(tabela_pedido.CurrentRow.Cells[7].Value.ToString());
+
+            i.addQuentinhaList(qtnha);
         }
     }
 }

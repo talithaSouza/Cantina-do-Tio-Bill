@@ -18,10 +18,10 @@ namespace Cantina_do_Tio_Bill.Class
         CONEXAO conexao = new CONEXAO();
 
         //inserir clientes
-        public bool InserirCliente(string nome, string sbnome, string telefone)
+        public bool InserirCliente(string nome, string sbnome, string telefone, string bairro, string rua, int num)
         {
             MySqlCommand command = new MySqlCommand();
-            string InsertQuery = "INSERT INTO `clientes`(`Nome`, `Sobrenome`, `Telefone`) VALUES (@nome,@sbnome,@tlfone)";
+            string InsertQuery = "INSERT INTO `clientes`(`Nome`, `Sobrenome`, `Telefone`, `Bairro`, `rua`, `numero`) VALUES (@nome,@sbnome,@tlfone,@bairro,@rua,@num)";
             command.CommandText = InsertQuery;
             command.Connection = conexao.getConexao();
 
@@ -29,6 +29,9 @@ namespace Cantina_do_Tio_Bill.Class
             command.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             command.Parameters.Add("@sbnome", MySqlDbType.VarChar).Value = sbnome;
             command.Parameters.Add("@tlfone", MySqlDbType.VarChar).Value = telefone;
+            command.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = bairro;
+            command.Parameters.Add("@rua", MySqlDbType.VarChar).Value = rua;
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = num;
 
             conexao.abrirConexao();
 
@@ -49,7 +52,7 @@ namespace Cantina_do_Tio_Bill.Class
         //Função para retornar a lista de usuarios cadastrados
         public DataTable getClientes()
         {
-            MySqlCommand comando = new MySqlCommand("SELECT id, nome, sobrenome, telefone FROM `clientes` LIMIT 0, 25", conexao.getConexao());
+            MySqlCommand comando = new MySqlCommand("SELECT id, nome, sobrenome, telefone, Bairro, rua, numero FROM `clientes` LIMIT 0, 25", conexao.getConexao());
             MySqlDataAdapter adaptar = new MySqlDataAdapter();
             DataTable tabela = new DataTable();
 
@@ -60,10 +63,10 @@ namespace Cantina_do_Tio_Bill.Class
         }
 
         //Editar Usuário
-        public bool editarCliente(int id, string nome, string sobrenome, string telefone)
+        public bool editarCliente(int id, string nome, string sobrenome, string telefone, string bairro, string rua, int num)
         {
             MySqlCommand comando = new MySqlCommand();
-            string editQuery = "UPDATE `clientes` SET `Nome`=@nome,`Sobrenome`=@sbnome,`Telefone`=@phone WHERE `id`=@cid";
+            string editQuery = "UPDATE `clientes` SET `Nome`=@nome,`Sobrenome`=@sbnome,`Telefone`=@phone, `Bairro`=@bairro, `rua`=@rua, `numero`=@num WHERE `id`=@cid";
             comando.CommandText = editQuery;
             comando.Connection = conexao.getConexao();
 
@@ -72,6 +75,9 @@ namespace Cantina_do_Tio_Bill.Class
             comando.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sbnome", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@phone", MySqlDbType.VarChar).Value = telefone;
+            comando.Parameters.Add("@bairro", MySqlDbType.VarChar).Value = bairro;
+            comando.Parameters.Add("@rua", MySqlDbType.VarChar).Value = rua;
+            comando.Parameters.Add("@num", MySqlDbType.Int32).Value = num;
             //comando.Parameters.Add("@senha", MySqlDbType.VarChar).Value = senha;
 
             conexao.abrirConexao();

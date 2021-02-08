@@ -32,7 +32,7 @@ namespace Cantina_do_Tio_Bill
             tb_Bairro.Text = "";
             tb_Rua.Text = "";
             tb_NumEndereco.Text = "";
-            tb_RefeEndeco.Text = "";
+            
         }
 
         private void btn_AdcCliente_Click(object sender, EventArgs e)
@@ -40,8 +40,11 @@ namespace Cantina_do_Tio_Bill
             string nome = tb_ClienteNome.Text;
             string sobrenome = tb_ClienteSobrenome.Text;
             string telefone = tb_ClienteTelefone.Text;
+            string bairro = tb_Bairro.Text;
+            string rua = tb_Rua.Text;
+            int num = int.Parse(tb_NumEndereco.Text);
 
-            Boolean TesteInserirCliente = cliente.InserirCliente(nome, sobrenome, telefone);
+            Boolean TesteInserirCliente = cliente.InserirCliente(nome, sobrenome, telefone,bairro,rua,num);
 
             if (TesteInserirCliente)
             {
@@ -59,6 +62,9 @@ namespace Cantina_do_Tio_Bill
             tb_ClienteNome.Text = dataGridViewClientes.CurrentRow.Cells[1].Value.ToString();
             tb_ClienteSobrenome.Text = dataGridViewClientes.CurrentRow.Cells[2].Value.ToString();
             tb_ClienteTelefone.Text = dataGridViewClientes.CurrentRow.Cells[3].Value.ToString();
+            tb_Bairro.Text = dataGridViewClientes.CurrentRow.Cells[4].Value.ToString();
+            tb_Rua.Text = dataGridViewClientes.CurrentRow.Cells[5].Value.ToString();
+            tb_NumEndereco.Text = dataGridViewClientes.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void btn_EditarCliente_Click_1(object sender, EventArgs e)
@@ -67,6 +73,9 @@ namespace Cantina_do_Tio_Bill
             string Nome = tb_ClienteNome.Text;
             string Sobrenome = tb_ClienteSobrenome.Text;
             string Telefone = tb_ClienteTelefone.Text;
+            string Bairro = tb_Bairro.Text;
+            string rua = tb_Rua.Text;
+            int num = int.Parse(tb_NumEndereco.Text);
 
             try
             {
@@ -78,7 +87,7 @@ namespace Cantina_do_Tio_Bill
                 }
                 else
                 {
-                    Boolean testeEditar = cliente.editarCliente(id, Nome, Sobrenome, Telefone);
+                    Boolean testeEditar = cliente.editarCliente(id, Nome, Sobrenome, Telefone, Bairro, rua, num);
                     if (testeEditar)
                     {
                         dataGridViewClientes.DataSource = cliente.getClientes();

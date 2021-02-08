@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Class\Cliente.cs" />
     <Compile Include="Class\CONEXAO.cs" />
+    <Compile Include="Class\ItensDoPedido.cs" />
     <Compile Include="Class\Pedidos.cs" />
     <Compile Include="Class\Quentinha.cs" />
     <Compile Include="Class\Usuario.cs" />
@@ -139,8 +140,6 @@
     <Content Include="img\login.png" />
     <Content Include="img\pratoCoração.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BD\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

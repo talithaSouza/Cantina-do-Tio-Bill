@@ -49,7 +49,7 @@ namespace Cantina_do_Tio_Bill
             string ingr5 = tb_QuentinhaIngrediente5.Text;
             double valor = double.Parse(tb_ValorQuentinha.Text);
 
-            Boolean TesteInserirNovaQuentinha = q.InserirNovaQuentinha(nome, opcarne, ingr1, ingr2, ingr3, ingr4, ingr5, valor);
+            Boolean TesteInserirNovaQuentinha = q.inserirNovaQuentinha(nome, opcarne, ingr1, ingr2, ingr3, ingr4, ingr5, valor);
 
             if (TesteInserirNovaQuentinha)
             {
@@ -115,12 +115,6 @@ namespace Cantina_do_Tio_Bill
 
         private void dataGridVQuentinha_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
-             * tb_IdCliente.Text = dataGridViewClientes.CurrentRow.Cells[0].Value.ToString();
-            tb_ClienteNome.Text = dataGridViewClientes.CurrentRow.Cells[1].Value.ToString();
-            tb_ClienteSobrenome.Text = dataGridViewClientes.CurrentRow.Cells[2].Value.ToString();
-            tb_ClienteTelefone.Text = dataGridViewClientes.CurrentRow.Cells[3].Value.ToString();
-             */
             tb_idQuentinha.Text = dataGridVQuentinha.CurrentRow.Cells[0].Value.ToString();
             tb_QuentinhaNome.Text = dataGridVQuentinha.CurrentRow.Cells[1].Value.ToString();
             tb_QuentinhaOpCarne.Text = dataGridVQuentinha.CurrentRow.Cells[2].Value.ToString();
@@ -130,7 +124,6 @@ namespace Cantina_do_Tio_Bill
             tb_QuentinhaIngrediente4.Text = dataGridVQuentinha.CurrentRow.Cells[6].Value.ToString();
             tb_QuentinhaIngrediente5.Text = dataGridVQuentinha.CurrentRow.Cells[7].Value.ToString();
             tb_ValorQuentinha.Text = dataGridVQuentinha.CurrentRow.Cells[8].Value.ToString();
-            //tb_ValorQuentinha.Text = dataGridVQuentinha.CurrentRow.Cells[8].Value.ToString();
 
         }
 
